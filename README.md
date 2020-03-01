@@ -42,10 +42,13 @@ There, no further configuration is needed, you are ready to go.
 
 The plugin relies on a C library that modifies the window attributes. It is heavily inspired by [gvimfullscreen](https://github.com/leonid-shevtsov/gvimfullscreen_win32), and compatible with it. Source code for the library is included in the `dll` directory.
 
-The x86 dll in the repository is built with the [Visual C++ 2015 Build Tools](http://landinghub.visualstudio.com/visual-cpp-build-tools). The code also compiles as x64.
+The x86 and x64 DLLs in the repository were built with the [Visual C++ 2019 Build Tools](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=BuildTools).
 
-Choose your target environment by opening the correct Visual C++ command prompt, then build the dll file with `nmake`, the included batch script, _or_ the command below —I like options.
+Choose your target environment by opening the correct Visual C++ command prompt, then run the matching batch file, or one of the commands below.
 
 ```
-cl.exe /LD bargreybars.c Gdi32.lib User32.lib
+# x86
+cl.exe /LD bargreybars.c Gdi32.lib User32.lib /Fe: bargreybars32.dll
+# x64
+cl.exe /LD bargreybars.c Gdi32.lib User32.lib /Fe: bargreybars64.dll
 ```

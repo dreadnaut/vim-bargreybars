@@ -1,7 +1,7 @@
 " BarGreyBars.vim - Removes grey borders from maximised windows
 " Platform:   Windows x86/x64
 " Maintainer: Dreadnaut <dreadnaut@gmail.com>
-" Version:    0.0.1
+" Version:    0.0.2
 
 
 " Avoid executing the script more than once, if vim is running
@@ -57,7 +57,11 @@ function! s:getWindowBackground() abort
 endfunction
 
 " The path of the external dll, built from the path of this script
-let s:dllFile = expand('<sfile>:p:h:h') . '/dll/bargreybars.dll'
+if has("win64")
+  let s:dllFile = expand('<sfile>:p:h:h') . '/dll/bargreybars64.dll'
+else
+  let s:dllFile = expand('<sfile>:p:h:h') . '/dll/bargreybars32.dll'
+endif
 
 " Call the external dll and set the window background
 " to the specified hex color (e.g., "#3f3f3f")
