@@ -1,7 +1,7 @@
 " BarGreyBars.vim - Removes grey borders from maximised windows
 " Platform:   Windows x86/x64
 " Maintainer: Dreadnaut <dreadnaut@gmail.com>
-" Version:    0.0.2
+" Version:    0.0.3
 
 
 " Avoid executing the script more than once, if vim is running
