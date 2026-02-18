@@ -1,3 +1,7 @@
+> [!IMPORTANT]  
+> As of version 9.2, GVim on Windows behaves as expected. This plugin is now
+> obsolete 🎉
+
 # bargreybars.vim
 
 Gvim windows have a grey background hidden behind the text area. When maximised their dimensions are not a multiple of the font size, so the background shows up as grey bars on the right and bottom side of the windows.
